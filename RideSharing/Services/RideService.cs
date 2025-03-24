@@ -13,7 +13,8 @@ namespace RideSharing.Services
         public List<Driver> Drivers { get; set; } = new List<Driver>();
 
         public void RequestRide(Passenger passenger, string pickupLocation, string dropoffLocation)
-        {
+        {    
+            //The request ride method creates an instance of ride with the provided params,and the calculatedFare Method  provided that there is any availabe drivers  
             var availableDrivers = Drivers.Where(d => d.AvailabilityStatus).ToList();
 
             if (availableDrivers.Any())
@@ -38,7 +39,7 @@ namespace RideSharing.Services
 
         private decimal CalculateFare(string pickupLocation, string dropoffLocation)
         {
-          //simulating price coz there is no actual distance
+          //This methods simulates a fare that will be charged based on the Km of a ride, it uses the ramdon class to generate an anmount
             Random random = new Random();
             return random.Next(10,500);
         

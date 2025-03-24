@@ -44,7 +44,7 @@ class Program
     }
 
     static void RegisterPassenger()
-    {
+    {  //Creates an instance of Passager with User Inputs and adds it to a list for type Passanger
         Console.Write("Enter Name: ");
         var name = Console.ReadLine();
         Console.Write("Enter Email: ");
@@ -64,7 +64,7 @@ class Program
     }
 
     static void RegisterDriver()
-    {
+    {   //Creates an Instance of type Driver based on the user inputs and stores them in a list for type Driver and Drivers List in the RideService 
         Console.Write("Enter Name: ");
         var name = Console.ReadLine();
         Console.Write("Enter Email: ");
@@ -87,7 +87,9 @@ class Program
     }
 
     static void Login()
-    {
+    {   
+        //Login in methods allowas the user to input their crendetials,and uses LinkQ to find the user in either the passagers list or driver list ,
+        //then depending on which list they are found in, they will be shown their their respective menues.
         Console.Write("Enter Email: ");
         var email = Console.ReadLine();
         Console.Write("Enter Password: ");
